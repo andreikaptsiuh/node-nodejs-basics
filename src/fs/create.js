@@ -1,6 +1,7 @@
 import path from "path";
 import { fileURLToPath } from 'url';
 import fs, { constants } from 'fs';
+import { fsErrorHandler } from "../errorHandlers/fsErrorHandler.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -22,8 +23,7 @@ export const create = async () => {
         if (error) {
             createFileWithContent();
         } else {
-            const message = "FS operation failed";
-            throw message;
+            fsErrorHandler();
         }
     });
 };
