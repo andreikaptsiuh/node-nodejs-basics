@@ -1,3 +1,3 @@
 export const fsErrorHandler = () => {
-    throw "FS operation failed";
+    throw new Error("FS operation failed");
 };
