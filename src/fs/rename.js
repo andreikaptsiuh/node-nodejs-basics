@@ -7,15 +7,7 @@ import { constants } from "fs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const checkFile = async (filePath) => {
-    try {
-        await fs.access(filePath, constants.F_OK);
-    } catch {
-        fsErrorHandler();
-    };
-};
-
-const checkRenamedFile = async (filePath) => {
+const checkNewFileName = async (filePath) => {
     let isFileWillBeRenamed = true;
 
     try {
@@ -32,12 +24,11 @@ export const rename = async () => {
     const fileForRenamePath = path.join(__dirname, "files", "wrongFilename.txt");
     const renamedFilePath = path.join(__dirname, "files", "properFilename.md");
 
-    await checkFile(fileForRenamePath);
-    await checkRenamedFile(renamedFilePath);
+    await checkNewFileName(renamedFilePath);
 
     try {
         await fs.rename(fileForRenamePath, renamedFilePath);
     } catch (error) {
-        console.log(error);
+        fsErrorHandler();
     };
 };
