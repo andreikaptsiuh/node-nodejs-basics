@@ -1,7 +1,7 @@
 import path from "path";
-import { fileURLToPath } from 'url';
-import fs from 'fs';
-import { readdir, mkdir, lstat } from 'fs/promises';
+import { fileURLToPath } from "url";
+import fs from "fs";
+import { readdir, mkdir, lstat } from "fs/promises";
 import { fsErrorHandler } from "../errorHandlers/fsErrorHandler.js";
 
 const __filename = fileURLToPath(import.meta.url);
