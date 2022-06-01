@@ -5,7 +5,7 @@ export const parseArgs = () => {
 
     args.forEach((arg, index) => {
         const argPrefix = arg.slice(0, 2);
-        if (argPrefix === '--') {
+        if (argPrefix === "--") {
             res.push(`${arg.slice(2)} is ${args[index + 1]}`);
         }
     });
