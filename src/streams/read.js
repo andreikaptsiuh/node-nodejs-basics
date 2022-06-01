@@ -9,5 +9,9 @@ export const read = async () => {
     const readFilePath = path.join(__dirname, "files", "fileToRead.txt");
     const readStream = fs.createReadStream(readFilePath);
 
+    readStream.on('error', (error) => {
+        readStream.destroy();
+    });
+
     readStream.pipe(process.stdout);
 };
