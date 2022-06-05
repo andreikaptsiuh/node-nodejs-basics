@@ -15,3 +15,5 @@ export const calculateHash = async () => {
     hash.update(fileForHashData);
     return hash.digest("hex");
 };
+
+calculateHash();

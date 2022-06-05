@@ -18,3 +18,5 @@ export const write = async () => {
     process.stdout.write("\nEnter text which should be write: \n");
     process.stdin.pipe(writeStream);
 };
+
+write();

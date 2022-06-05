@@ -15,3 +15,5 @@ export const remove = async () => {
         fsErrorHandler();
     }
 };
+
+remove();

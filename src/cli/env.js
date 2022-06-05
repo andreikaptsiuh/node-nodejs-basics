@@ -13,3 +13,5 @@ export const parseEnv = () => {
 
     if (res.length > 0) console.log(res.join("; "));
 };
+
+parseEnv();

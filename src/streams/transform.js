@@ -13,3 +13,5 @@ export const transform = async () => {
     process.stdout.write("\x1b[33m Exit: Cntrl + C \x1b[0m");
     process.stdout.write("\nEnter text which should be transformed: \n");
 };
+
+transform();

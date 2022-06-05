@@ -53,3 +53,5 @@ export const copy = async () => {
 
     await readAndCopyDir(dirPath, dirForCopiedPath);
 };
+
+copy();

@@ -15,3 +15,5 @@ export const read = async () => {
 
     readStream.pipe(process.stdout);
 };
+
+read();

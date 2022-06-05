@@ -12,3 +12,5 @@ export const parseArgs = () => {
 
     if (res.length > 0) console.log(res.join(", "))
 };
+
+parseArgs();
